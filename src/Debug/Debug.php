@@ -41,15 +41,16 @@ class Debug
      */
     public static function varDump()
     {
-        $result = '';
+        $result = [];
 
         $num = func_num_args();
         for ($i = 0; $i < $num; $i++) {
             $var = func_get_arg($i);
-            $result .= "\nNo.{$i}=" . self::formatVar($var);
+            $no = $i + 1;
+            $result[] = "No.{$no} = " . self::formatVar($var);
         }
 
-        return $result;
+        return "\n" . implode("\n", $result) . "\n";
     }
 
 
