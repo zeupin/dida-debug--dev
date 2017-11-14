@@ -15,6 +15,12 @@ namespace Dida\Debug;
 class Debug
 {
     /**
+     * Version
+     */
+    const VERSION = '20171114';
+
+
+    /**
      * 显示一个需要跟踪的变量，然后停止运行
      *
      * 如果是想不显示变量就直接停止的话，建议用PHP自带的die()或者exit()。
