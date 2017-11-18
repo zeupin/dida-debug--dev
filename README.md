@@ -1,6 +1,6 @@
-# Dida\Debug 组件
+# Dida\Debug 组件库
 
-`Dida\Debug` 一个小巧的Debug，以更加清晰易读的方式，输出调试变量信息。它是 [宙品科技](http://zeupin.com) 开源的 [Dida框架](http://dida.zeupin.com) 的一个功能组件。
+`Dida\Debug` 一个小巧的Debug，以更加清晰易读的方式，输出调试变量信息。它是 [宙品科技](http://zeupin.com) 开源的 [Dida框架](http://dida.zeupin.com) 的一个功能组件库。
 
 * MIT开源协议。
 * 对Array型变量可以输出美观的组对齐格式。
