@@ -29,9 +29,6 @@ class Debug
 
     /**
      * 需要忽略的属性名。
-     * [
-     *     "classname" => [属性名1,属性名2, ...]
-     * ]
      * @var array
      */
     protected static $filter_prop_ignores = [];
@@ -91,7 +88,11 @@ class Debug
 
 
     /**
-     * @param type $ignores
+     * 设置需要忽略的属性列表。
+     * @param array $ignores
+     * [
+     *     "classname" => [属性名1,属性名2, ...]
+     * ]
      */
     public static function filterPropNames(array $ignores)
     {
@@ -218,13 +219,6 @@ class Debug
     }
 
 
-    protected function getNewObjID()
-    {
-        $this->objID ++;
-        return $this->objID;
-    }
-
-
     /**
      * 把一个对象的值，用可读性良好的格式输出出来。
      *
@@ -304,6 +298,28 @@ class Debug
     }
 
 
+    /**
+     * 顺序生成$objects表的uuid。
+     *
+     * @return int
+     *
+     * @todo 其实这个地方应该给出的是对象的id。但是不知道怎么取出，只好先暂时用一个递增的计数器来简单模拟。
+     */
+    protected function getNewObjID()
+    {
+        $this->objID ++;
+        return $this->objID;
+    }
+
+
+    /**
+     * 检查指定的属性是否需要忽略掉。
+     *
+     * @param string $class
+     * @param string $propName
+     *
+     * @return boolean
+     */
     protected function ignored($class, $propName)
     {
         if (isset(self::$filter_prop_ignores[$class])) {
