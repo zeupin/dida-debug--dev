@@ -115,7 +115,7 @@ class Debug
             $result[] = "No.{$no} = " . $debug->formatVar($var);
         }
 
-        return "\n" . implode("\n", $result) . "\n";
+        echo "\n" . implode("\n", $result) . "\n";
     }
 
 
